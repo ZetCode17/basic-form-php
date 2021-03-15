@@ -19,9 +19,15 @@
     <style>
         /* width */
         .tab-pane {
-            height: 500px;
+            height: 450px;
             width: auto;
             overflow: auto;
+
+        }
+
+        .single-product-item {
+            background: linear-gradient(to right, #90d7f7, #e7c1da);
+            border-radius: 10px;
         }
 
         /* width */
@@ -37,13 +43,8 @@
 
         /* Handle */
         ::-webkit-scrollbar-thumb {
-            background: red;
+            background: linear-gradient(to bottom, #90d7f7, #e7c1da);
             border-radius: 10px;
-        }
-
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-            background: #b30000;
         }
     </style>
     <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -51,28 +52,28 @@
 
 <body>
     <div class="shop-area pt-110 pb-100 bg-gray mb-95 shop-full-width">
-            <div class="ht-product-shop tab-content" style="margin-left: 400px; margin-top:80px; margin-right:20px;">
-                <div class="tab-pane active show fade" id="list" role="tabpanel">
-                    <?php for ($i = 1; $i < 10; $i++) { ?>
+        <div class="ht-product-shop tab-content" style="margin-left: 400px; margin-top:80px; margin-right:20px;">
+            <div class="tab-pane active show fade" id="list" role="tabpanel">
+                <?php for ($i = 1; $i < 10; $i++) { ?>
 
-                        <div class="single-product-item">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/logo.png" alt="" width="100px" height="100px">
-                                    </a>
-                                </div>
-                                <div class="col-md-10">
-                                    <h5 style="color: #2c2da5; font-weight:bold; font-size:1.8em; padding-bottom:10px;">NGUYỄN VĂN ABC </h5>
-                                    <h5 style="color: #2c2da5; font-weight:bold; font-size:1.5em; padding-bottom:10px;">Đơn vị: Đoàn TNCS Hồ Chí Minh có nhũng chương trình Đoàn TNCS Hồ Chg</h5>
-                                    <h5 style="color: #2c2da5; font-size:1.3em;">Đoàn TNCS Hồ Chí Minh có nhũng chương trình Đoàn TNCS Hồ Chí Minh có nhũng chương trìnhĐoàn TNCS Hồ Chí Minh có nhũng chương trìnhĐoàn TNCS Hồ Chí Minh có nhũng chương  trình</h5>
-                                </div>
+                    <div class="single-product-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <a href="product-details.html">
+                                    <img src="assets/img/logo.png" alt="" width="100px" height="100px" href="#">
+                                </a>
+                            </div>
+                            <div class="col-md-10">
+                                <h5 style="color: #2c2da5; font-weight:bold; font-size:1.8em; padding-bottom:10px;">NGUYỄN VĂN ABC </h5>
+                                <h5 style="color: #2c2da5; font-weight:bold; font-size:1.5em; padding-bottom:10px;">Đơn vị: Đoàn TNCS Hồ Chí Minh có nhũng chương trình Đoàn TNCS Hồ Chg</h5>
+                                <h5 style="color: #2c2da5; font-size:1.3em;">Đoàn TNCS Hồ Chí Minh có nhũng chương trình Đoàn TNCS Hồ Chí Minh có nhũng chương trìnhĐoàn TNCS Hồ Chí Minh có nhũng chương trìnhĐoàn TNCS Hồ Chí Minh có nhũng chương trình</h5>
                             </div>
                         </div>
+                    </div>
 
-                    <?php } ?>
-                </div>
+                <?php } ?>
             </div>
+        </div>
         <!-- All js here -->
         <script src="assets/js/vendor/jquery-3.2.1.min.js"></script>
         <script src="assets/js/popper.min.js"></script>
