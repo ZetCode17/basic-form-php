@@ -1,3 +1,11 @@
+<?php
+include('./lib/function.php');
+$options = array(
+    'order_by' => 'id desc'
+);
+$list_user = get_all('danhsach', $options);
+
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -58,24 +66,24 @@
     <div class="shop-area pt-110 pb-100 bg-gray mb-95 shop-full-width">
         <div class="ht-product-shop tab-content" style="margin-left: 400px; margin-top:80px; margin-right:20px;">
             <div class="tab-pane active show fade scroll-bar" id="list" role="tabpanel">
-                <?php for ($i = 1; $i < 10; $i++) { ?>
 
+                <?php foreach ($list_user as $user) : ?>
                     <div class="single-product-item">
                         <div class="row">
                             <div class="col-md-2">
-                                <a href="product-details.html">
+                                <a href="#">
                                     <img src="assets/img/logo.png" alt="" width="100px" height="100px" href="#">
                                 </a>
                             </div>
                             <div class="col-md-10">
-                                <h5 style="color: #2c2da5; font-weight:bold; font-size:1.8em; padding-bottom:10px;">NGUYỄN VĂN ABC </h5>
-                                <h5 style="color: #2c2da5; font-weight:bold; font-size:1.5em; padding-bottom:10px;">Đơn vị: Đoàn TNCS Hồ Chí Minh có nhũng chương trình Đoàn TNCS Hồ Chg</h5>
-                                <h5 style="color: #2c2da5; font-size:1.3em;">Đoàn TNCS Hồ Chí Minh có nhũng chương trình Đoàn TNCS Hồ Chí Minh có nhũng chương trìnhĐoàn TNCS Hồ Chí Minh có nhũng chương trìnhĐoàn TNCS Hồ Chí Minh có nhũng chương trình</h5>
+                                <h5 style="color: #2c2da5; font-weight:bold; font-size:1.8em; padding-bottom:10px;"><?= $user['ds_name'] ?></h5>
+                                <h5 style="color: #2c2da5; font-weight:bold; font-size:1.5em; padding-bottom:10px;">Đơn vị: <?= $user['ds_address'] ?></h5>
+                                <h5 style="color: #2c2da5; font-size:1.3em;"><?= $user['ds_desc'] ?></h5>
                             </div>
                         </div>
                     </div>
+                <?php endforeach; ?>
 
-                <?php } ?>
             </div>
         </div>
         <!-- All js here -->
