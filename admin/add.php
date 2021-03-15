@@ -11,3 +11,4 @@ function add()
     save('danhsach', $add_data);
 }
 add();
+header('location:list.php');
