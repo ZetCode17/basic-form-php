@@ -39,8 +39,8 @@ $list_user = get_all('danhsach', $options);
                     <td><?= $user['ds_address'] ?></td>
                     <td><?= $user['ds_desc'] ?></td>
                     <td>
-                        
-                    <a onclick="return confirm('Are you sure to delete?')" href="delete.php?user_id=<?php echo $user['id']; ?>">Delete </a>
+                        <a href="edit.php?user_id=<?php echo $user['id']; ?>">Edit</a> |
+                        <a onclick="return confirm('Are you sure to delete?')" href="delete.php?user_id=<?php echo $user['id']; ?>">Delete </a>
                     </td>
                 </tr>
             <?php endforeach; ?>
