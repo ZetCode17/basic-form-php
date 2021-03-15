@@ -22,30 +22,34 @@
             height: 450px;
             width: auto;
             overflow: auto;
-
         }
+
+
 
         .single-product-item {
             background: linear-gradient(to right, #90d7f7, #e7c1da);
             border-radius: 10px;
         }
 
-        /* width */
-        ::-webkit-scrollbar {
-            width: 15px;
+        /* SCROLL BAR CUSTOM */
+        /* open scroll bar */
+        .scroll-bar::-webkit-scrollbar {
+            overflow-y: scroll;
         }
 
-        /* Track */
-        ::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 5px grey;
+        /* custom background scroll bar */
+        .scroll-bar::-webkit-scrollbar-track {
+            background-color: white;
             border-radius: 10px;
         }
 
-        /* Handle */
+        /* Handle scroll bar */
         ::-webkit-scrollbar-thumb {
             background: linear-gradient(to bottom, #90d7f7, #e7c1da);
             border-radius: 10px;
         }
+
+        /* END SCROLL BAR CUSTOM */
     </style>
     <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
 </head>
@@ -53,7 +57,7 @@
 <body>
     <div class="shop-area pt-110 pb-100 bg-gray mb-95 shop-full-width">
         <div class="ht-product-shop tab-content" style="margin-left: 400px; margin-top:80px; margin-right:20px;">
-            <div class="tab-pane active show fade" id="list" role="tabpanel">
+            <div class="tab-pane active show fade scroll-bar" id="list" role="tabpanel">
                 <?php for ($i = 1; $i < 10; $i++) { ?>
 
                     <div class="single-product-item">
