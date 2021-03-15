@@ -15,11 +15,25 @@ include('../lib/function.php');
 
 <body>
 
+    <h2>Add user</h2>
+    <br>
+    <hr>
+
     <form action="add.php" method="post">
-        <input type="text" name="user_name">
-        <input type="text" name="user_address">
-        <input type="text" name="user_desc">
-        <button type="submit">add</button>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Họ tên</label>
+            <input required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name" name="user_name">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Đơn vị</label>
+            <input required name="user_address" type="text" class="form-control" id="exampleInputPassword1" placeholder="Nhạp don vi">
+        </div>
+        <div class="form-group form-check">
+            <label class="form-check-label" for="exampleCheck1">Câu hỏi</label><br>
+            <textarea required name="user_desc" id="exampleCheck1" cols="70" rows="10"></textarea>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </body>
 
