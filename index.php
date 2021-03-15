@@ -51,7 +51,7 @@
 
 <body>
     <div class="shop-area pt-110 pb-100 bg-gray mb-95 shop-full-width">
-            <div class="ht-product-shop tab-content" style="margin-left: 380px; margin-top:80px; margin-right:20px;">
+            <div class="ht-product-shop tab-content" style="margin-left: 400px; margin-top:80px; margin-right:20px;">
                 <div class="tab-pane active show fade" id="list" role="tabpanel">
                     <?php for ($i = 1; $i < 10; $i++) { ?>
 
