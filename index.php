@@ -15,6 +15,7 @@ echo header("refresh: 10");
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>THANH NIEN VIETNAM - VUNG TIN TIEP BUOC</title>
     <meta name="description" content="">
+    <link rel="icon" href="./assets/img/Huy_Hiệu_Đoàn.png" type="image/gif" sizes="16x16">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
