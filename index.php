@@ -27,6 +27,16 @@ echo header("refresh: 10");
     <link rel="stylesheet" href="assets/css/plugins.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
+        /* font */
+        @font-face {
+            font-family: myFont;
+            src: url("./font/coolvetica.ttf")
+        }
+
+        .font {
+            font-family: myFont;
+        }
+
         /* width */
         .tab-pane {
             height: 450px;
@@ -80,7 +90,7 @@ echo header("refresh: 10");
                             <div class="col-md-10">
                                 <h5 style="color: red; font-weight:bold; font-size:1.8em; padding-bottom:10px;"><?= $user['ds_name'] ?></h5>
                                 <h5 style="color: #2c2da5; font-weight:bold; font-size:1.5em; padding-bottom:10px;">Đơn vị: <?= $user['ds_address'] ?></h5>
-                                <h5 style="color: #2c2da5; font-size:1.3em; font:arial;"><?= $user['ds_desc'] ?></h5>
+                                <h5 class="font" style="color: #2c2da5; font-size:1.5em;"><?= $user['ds_desc'] ?></h5>
                             </div>
                         </div>
                     </div>
