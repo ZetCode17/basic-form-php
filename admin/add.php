@@ -33,6 +33,9 @@ include('../lib/function.php');
                         <label for="exampleInputPassword1">Đơn vị</label>
                         <input required name="ds_address" type="text" class="form-control" id="exampleInputPassword1" placeholder="Nhập đơn vị">
                     </div>
+                    <div class="form-group" style="text-align: center;">
+                        <button style="text-align: center;" type="submit" class="btn btn-primary">Submit</button>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group form-check">
@@ -40,9 +43,6 @@ include('../lib/function.php');
                         <textarea required name="ds_desc" id="exampleCheck1" cols="70" rows="6"></textarea>
 
                     </div>
-                </div>
-                <div class="form-group" style="text-align: center;">
-                    <button style="text-align: center;" type="submit" class="btn btn-primary">Submit</button>
                 </div>
         </form>
     </div>
