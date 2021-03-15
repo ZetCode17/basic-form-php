@@ -1,5 +1,5 @@
 <?php
-
+require('config/database.php');
 function get_all($table, $options = array())
 {
     $select = isset($options['select']) ? $options['select'] : '*';
@@ -18,7 +18,24 @@ function get_all($table, $options = array())
     }
     return $data;
 }
-
+function get_a_record($table, $id, $select = '*')
+{
+    $id = intval($id);
+    global $linkconnectDB;
+    $sql = "SELECT $select FROM `$table` WHERE id=$id";
+    $query = mysqli_query($linkconnectDB, $sql) or die(mysqli_error($linkconnectDB));
+    $data = NULL;
+    if (mysqli_num_rows($query) > 0) {
+        $data = mysqli_fetch_assoc($query);
+        mysqli_free_result($query);
+    }
+    return $data;
+}
+function escape($str)
+{
+    global $linkconnectDB;
+    return mysqli_real_escape_string($linkconnectDB, $str);
+}
 function save($table, $data = array())
 {
     $values = array();
@@ -53,4 +70,18 @@ function select_a_record($table, $options = array(), $select = '*')
         mysqli_free_result($query);
     }
     return $data;
+}
+
+
+
+
+
+// ---------------------
+
+function ds_delete($id)
+{
+    global $linkconnectDB;
+    $id = intval($id);
+    $sql = "DELETE FROM danhsach WHERE id=$id";
+    mysqli_query($linkconnectDB, $sql) or die(mysqli_error($linkconnectDB));
 }
