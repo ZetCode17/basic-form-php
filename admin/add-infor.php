@@ -20,6 +20,12 @@ include('../lib/function.php');
     <hr>
 
     <form action="add.php" method="post">
+    
+        <div class="form-group">
+            <label for="exampleInputEmail1">Họ tên</label>
+            <input required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name" name="id" type = "hidden">
+        </div>
+
         <div class="form-group">
             <label for="exampleInputEmail1">Họ tên</label>
             <input required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name" name="ds_name">
