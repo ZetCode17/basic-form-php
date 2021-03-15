@@ -18,34 +18,36 @@ $list_user = get_all('danhsach', $options);
 </head>
 
 <body>
-    <h2>Danh sách</h2>
-    <table class="table">
-        <thead>
+    <div class="container">
+        <h2>Danh sách</h2>
+        <table class="table">
+            <thead>
 
-            <tr>
-                <th scope="col">stt</th>
-                <th scope="col">Tên</th>
-                <th scope="col">Đon vị</th>
-                <th scope="col">Câu hỏi</th>
-                <th>Action</th>
-            </tr>
-
-        </thead>
-        <tbody>
-            <?php foreach ($list_user as $user) : ?>
                 <tr>
-                    <th scope="row"><?php echo $user['id'] ?></th>
-                    <td><?= $user['ds_name'] ?></td>
-                    <td><?= $user['ds_address'] ?></td>
-                    <td><?= $user['ds_desc'] ?></td>
-                    <td>
-                        <a href="edit.php?user_id=<?php echo $user['id']; ?>">Edit</a> |
-                        <a onclick="return confirm('Are you sure to delete?')" href="delete.php?user_id=<?php echo $user['id']; ?>">Delete </a>
-                    </td>
+                    <th scope="col">stt</th>
+                    <th scope="col">Tên</th>
+                    <th scope="col">Đon vị</th>
+                    <th scope="col">Câu hỏi</th>
+                    <th>Action</th>
                 </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+
+            </thead>
+            <tbody>
+                <?php foreach ($list_user as $user) : ?>
+                    <tr>
+                        <th scope="row"><?php echo $user['id'] ?></th>
+                        <td style="color: red; font-weight: bold;"><?= $user['ds_name'] ?></td>
+                        <td><?= $user['ds_address'] ?></td>
+                        <td><?= $user['ds_desc'] ?></td>
+                        <td>
+                            <a href="edit.php?user_id=<?php echo $user['id']; ?>">Edit</a> |
+                            <a onclick="return confirm('Are you sure to delete?')" href="delete.php?user_id=<?php echo $user['id']; ?>">Delete </a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>

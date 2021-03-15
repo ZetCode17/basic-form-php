@@ -4,6 +4,7 @@ $options = array(
     'order_by' => 'id desc'
 );
 $list_user = get_all('danhsach', $options);
+echo header("refresh: 10");
 
 ?>
 <!doctype html>
@@ -76,9 +77,9 @@ $list_user = get_all('danhsach', $options);
                                 </a>
                             </div>
                             <div class="col-md-10">
-                                <h5 style="color: #2c2da5; font-weight:bold; font-size:1.8em; padding-bottom:10px;"><?= $user['ds_name'] ?></h5>
+                                <h5 style="color: red; font-weight:bold; font-size:1.8em; padding-bottom:10px;"><?= $user['ds_name'] ?></h5>
                                 <h5 style="color: #2c2da5; font-weight:bold; font-size:1.5em; padding-bottom:10px;">Đơn vị: <?= $user['ds_address'] ?></h5>
-                                <h5 style="color: #2c2da5; font-size:1.3em;"><?= $user['ds_desc'] ?></h5>
+                                <h5 style="color: #2c2da5; font-size:1.3em; font:arial;"><?= $user['ds_desc'] ?></h5>
                             </div>
                         </div>
                     </div>
