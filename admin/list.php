@@ -21,6 +21,9 @@ $list_user = get_all('danhsach', $options);
 <body>
     <div class="container">
         <h2>Danh sách</h2>
+        <br>
+        <a href="add.php" class="btn btn-primary">Add new user</a>
+        <br>
         <table class="table">
             <thead>
 
