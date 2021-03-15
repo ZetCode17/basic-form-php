@@ -22,15 +22,15 @@ include('../lib/function.php');
     <form action="add.php" method="post">
         <div class="form-group">
             <label for="exampleInputEmail1">Họ tên</label>
-            <input required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name" name="user_name">
+            <input required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name" name="ds_name">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Đơn vị</label>
-            <input required name="user_address" type="text" class="form-control" id="exampleInputPassword1" placeholder="Nhạp don vi">
+            <input required name="ds_address" type="text" class="form-control" id="exampleInputPassword1" placeholder="Nhạp don vi">
         </div>
         <div class="form-group form-check">
             <label class="form-check-label" for="exampleCheck1">Câu hỏi</label><br>
-            <textarea required name="user_desc" id="exampleCheck1" cols="70" rows="10"></textarea>
+            <textarea required name="ds_desc" id="exampleCheck1" cols="70" rows="10"></textarea>
 
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
